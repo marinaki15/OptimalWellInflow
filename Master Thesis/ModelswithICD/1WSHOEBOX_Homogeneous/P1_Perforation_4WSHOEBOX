@@ -1,0 +1,56 @@
+WELSPECS
+-- Well  Grp  I   J   RefDepth  Type  DrainRad  GasInEq  AutoShut  XFlow  FluidPVT  HydSDens  FluidInPlReg
+   P1    1*   15  30  1*        OIL   0.0       STD      STOP      YES    0         SEG       0            /
+    /
+COMPDAT
+-- Well   I    J    K1   K2   Status   SAT   TR             DIAM      KH             S         Df   DIR
+-- ---- Completions for completion type Perforation ----
+-- Perforation Completion : MD In: 2268.21 - MD Out: 2278.59 Transmissibility: 6.48227
+   P1     18   30   2    2    OPEN     1*    6.482270E+00   0.25000   3.283254E+02   0.00000   1*   'X' /
+-- Perforation Completion : MD In: 2278.59 - MD Out: 2303.59 Transmissibility: 15.611
+   P1     19   30   2    2    OPEN     1*    1.561096E+01   0.25000   7.905807E+02   0.00000   1*   'X' /
+-- Perforation Completion : MD In: 2303.59 - MD Out: 2328.59 Transmissibility: 15.611
+   P1     20   30   2    2    OPEN     1*    1.561099E+01   0.25000   7.905832E+02   0.00000   1*   'X' /
+-- Perforation Completion : MD In: 2328.59 - MD Out: 2353.59 Transmissibility: 15.611
+   P1     21   30   2    2    OPEN     1*    1.561099E+01   0.25000   7.905832E+02   0.00000   1*   'X' /
+-- Perforation Completion : MD In: 2353.59 - MD Out: 2378.59 Transmissibility: 15.611
+   P1     22   30   2    2    OPEN     1*    1.561099E+01   0.25000   7.905832E+02   0.00000   1*   'X' /
+-- Perforation Completion : MD In: 2378.59 - MD Out: 2399.57 Transmissibility: 13.1029
+   P1     23   30   2    2    OPEN     1*    1.310290E+01   0.25000   6.635667E+02   0.00000   1*   'X' /
+-- Perforation Completion : MD In: 2415 - MD Out: 2428.59 Transmissibility: 8.48637
+   P1     24   30   2    2    OPEN     1*    8.486366E+00   0.25000   4.297713E+02   0.00000   1*   'X' /
+-- Perforation Completion : MD In: 2428.59 - MD Out: 2453.59 Transmissibility: 15.6109
+   P1     25   30   2    2    OPEN     1*    1.561086E+01   0.25000   7.905738E+02   0.00000   1*   'X' /
+-- Perforation Completion : MD In: 2453.59 - MD Out: 2478.59 Transmissibility: 15.6109
+   P1     26   30   2    2    OPEN     1*    1.561086E+01   0.25000   7.905738E+02   0.00000   1*   'X' /
+-- Perforation Completion : MD In: 2478.59 - MD Out: 2503.59 Transmissibility: 15.6109
+   P1     27   30   2    2    OPEN     1*    1.561086E+01   0.25000   7.905738E+02   0.00000   1*   'X' /
+-- Perforation Completion : MD In: 2503.59 - MD Out: 2528.59 Transmissibility: 15.6109
+   P1     28   30   2    2    OPEN     1*    1.561086E+01   0.25000   7.905738E+02   0.00000   1*   'X' /
+-- Perforation Completion : MD In: 2528.59 - MD Out: 2547.41 Transmissibility: 11.7545
+   P1     29   30   2    2    OPEN     1*    1.175451E+01   0.25000   5.952780E+02   0.00000   1*   'X' /
+-- Perforation Completion : MD In: 2565.9 - MD Out: 2578.59 Transmissibility: 7.92766
+   P1     30   30   2    2    OPEN     1*    7.927664E+00   0.25000   4.014797E+02   0.00000   1*   'X' /
+-- Perforation Completion : MD In: 2578.59 - MD Out: 2603.59 Transmissibility: 15.611
+   P1     31   30   2    2    OPEN     1*    1.561099E+01   0.25000   7.905857E+02   0.00000   1*   'X' /
+-- Perforation Completion : MD In: 2603.59 - MD Out: 2628.59 Transmissibility: 15.611
+   P1     32   30   2    2    OPEN     1*    1.561099E+01   0.25000   7.905857E+02   0.00000   1*   'X' /
+-- Perforation Completion : MD In: 2628.59 - MD Out: 2653.59 Transmissibility: 15.611
+   P1     33   30   2    2    OPEN     1*    1.561099E+01   0.25000   7.905857E+02   0.00000   1*   'X' /
+-- Perforation Completion : MD In: 2653.59 - MD Out: 2678.59 Transmissibility: 15.611
+   P1     34   30   2    2    OPEN     1*    1.561099E+01   0.25000   7.905857E+02   0.00000   1*   'X' /
+-- Perforation Completion : MD In: 2678.59 - MD Out: 2697 Transmissibility: 11.4953
+   P1     35   30   2    2    OPEN     1*    1.149533E+01   0.25000   5.821567E+02   0.00000   1*   'X' /
+-- Perforation Completion : MD In: 2713.74 - MD Out: 2728.59 Transmissibility: 9.27612
+   P1     36   30   2    2    OPEN     1*    9.276119E+00   0.25000   4.697741E+02   0.00000   1*   'X' /
+-- Perforation Completion : MD In: 2728.59 - MD Out: 2753.59 Transmissibility: 15.6113
+   P1     37   30   2    2    OPEN     1*    1.561133E+01   0.25000   7.906177E+02   0.00000   1*   'X' /
+-- Perforation Completion : MD In: 2753.59 - MD Out: 2778.59 Transmissibility: 15.6113
+   P1     38   30   2    2    OPEN     1*    1.561133E+01   0.25000   7.906177E+02   0.00000   1*   'X' /
+-- Perforation Completion : MD In: 2778.59 - MD Out: 2803.59 Transmissibility: 15.6113
+   P1     39   30   2    2    OPEN     1*    1.561133E+01   0.25000   7.906177E+02   0.00000   1*   'X' /
+-- Perforation Completion : MD In: 2803.59 - MD Out: 2828.59 Transmissibility: 15.6113
+   P1     40   30   2    2    OPEN     1*    1.561133E+01   0.25000   7.906177E+02   0.00000   1*   'X' /
+-- Perforation Completion : MD In: 2828.59 - MD Out: 2898.41 Transmissibility: 9.05779
+   P1     41   30   2    2    OPEN     1*    9.057795E+00   0.25000   4.587214E+02   0.00000   1*   'X' /
+    /
