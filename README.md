@@ -10,3 +10,5 @@ The script optimalwellinflow.py executes this workflow, the variables required b
 The well control optimization is executed in FieldOpt (https://github.com/PetroleumCyberneticsGroup/FieldOpt).
 Data files for the simple synthetic models described in Nakibuule (2021) are included.
 
+Reference:
+Nakibuule, M.A.(2021).Optimal Well Inflow Modelling. Norwegian University of Science and Technology, Department of Geoscience and Petroleum. 
