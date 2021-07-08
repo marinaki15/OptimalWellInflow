@@ -8,7 +8,7 @@ In the workflow the horizontal well is partitioned into a number of segments and
 
 The script optimalwellinflow.py executes this workflow, the variables required by the code are declared in the input.py file.
 The well control optimization is executed in FieldOpt (https://github.com/PetroleumCyberneticsGroup/FieldOpt).
-Data files for the simple synthetic models described in Nakibuule (2021) are included.
+Data files for the simple synthetic models; homogeneous and heterogeneous reservoirs, described in Nakibuule (2021) are included. Tese can be run with both Flow (https://opm-project.org/) and Eclipse.
 
 Reference:
 Nakibuule, M.A.(2021).Optimal Well Inflow Modelling. Norwegian University of Science and Technology, Department of Geoscience and Petroleum. 
