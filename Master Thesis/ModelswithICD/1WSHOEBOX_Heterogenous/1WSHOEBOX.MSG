@@ -1,0 +1,121 @@
+<eclipse>
+<message source="eclrun" date="" time="0">
+Executing ECLIPSE on linux system with x86_64 architecture named petra.igp.ntnu.no
+</message>
+<message source="eclrun" date="" time="0">
+Process ID is 128274
+</message>
+<message source="eclrun" date="" time="0">
+Starting HDF conversion ...
+</message>
+<message source="eclrun" date="" time="0">
+HDF conversion completed successfully.
+</message>
+<message date="1/1/0" time="0.00000000000000">
+ CHECKING FOR LICENSES                                                   
+</message>
+<message date="1/1/2015" time="0.00000000000000">
+ THE CPR LINEAR SOLVER HAS BEEN ACTIVATED                                
+ IN ADAPTIVE MODE.                                                       
+</message>
+<message date="1/1/2015" time="0.00000000000000">
+ CHECKING FOR LICENSES                                                   
+</message>
+<message date="1/1/2015" time="0.00000000000000">
+ THE MEMORY REQUIRED TO PROCESS THE GRID SECTION IS                      
+      30702 KBYTES                                                       
+</message>
+<warning date="1/1/2015" time="0.00000000000000">
+        68400 VALUES NOT DEFINED IN BOX (  1- 60,  1- 60,  1- 20)        
+ OF KEYWORD TOPS                                                         
+</warning>
+<message date="1/1/2015" time="0.00000000000000">
+ UNSPECIFIED TOPS VALUES OBTAINED BY ADDING DZ                           
+ TO TOPS VALUE FOR LAYER ABOVE                                           
+</message>
+<message date="1/1/2015" time="0.00000000000000">
+ NEITHER OLDTRAN,OLDTRANR NOR NEWTRAN SPECIFIED                          
+ BLOCK CENTRE TRANSMISSIBILITIES TO BE CALCULATED                        
+ USING  OLDTRAN                                                          
+</message>
+<warning date="1/1/2015" time="0.00000000000000">
+ AN ILLEGAL AQUIFER-AQUIFER CONNECTION HAS BEEN DETECTED                 
+ BETWEEN NUMERICAL AQUIFERS        1 AND        1                        
+ AT GRID LOCATION (      30,      30,      20).                          
+ THE CONNECTION HAS BEEN REMOVED.                                        
+</warning>
+<message date="1/1/2015" time="0.00000000000000">
+ 3599 NON-NEIGHBOUR CONNECTIONS PRESENT                                  
+</message>
+<message date="1/1/2015" time="0.00000000000000">
+ NUMBER OF ACTIVE CELLS IS 72000                                         
+</message>
+<message date="1/1/2015" time="0.00000000000000">
+ THE MEMORY REQUIRED TO PROCESS THE SOLUTION SECTION IS                  
+      86232 KBYTES                                                       
+</message>
+<message date="1/1/2015" time="0.00000000000000">
+    62453 CHARACTER VARIABLES USED                                       
+</message>
+<warning date="1/1/2015" time="0.00000000000000">
+ SPURIOUS DATA BEFORE INCLUDE  KEYWORD                                   
+ 1* 1* 30 /                                                              
+</warning>
+<message date="1/1/2015" time="0.00000000000000">
+ OPENING WELL P1       AT TIME      0.00   DAYS                          
+ CONTROLLED BY BOTTOM HOLE PRESSURE                                      
+</message>
+<message date="1/1/2015" time="0.00000000000000">
+ RESTART FILE WRITTEN   REPORT     0                                     
+</message>
+<message date="1/1/2015" time="0.00000000000000">
+ ******************************************                              
+ * WELL P1       HAS CHANGED TO           *                              
+ * CONTROL BY LIQUID RATE                 *                              
+ * FROM TIME      0.00   DAYS  .          *                              
+ ******************************************                              
+</message>
+<message date="1/1/2015" time="0.74326240728990">
+ ******************************************                              
+ * WELL P1       HAS CHANGED TO           *                              
+ * CONTROL BY BOTTOM HOLE PRESSURE        *                              
+ * FROM TIME      0.74   DAYS  .          *                              
+ ******************************************                              
+</message>
+<message date="1/1/2016" time="365.00000000000000">
+ RESTART FILE WRITTEN   REPORT     1                                     
+</message>
+<message date="31/12/2016" time="730.00000000000000">
+ RESTART FILE WRITTEN   REPORT     2                                     
+</message>
+<message date="31/12/2017" time="1095.00000000000000">
+ RESTART FILE WRITTEN   REPORT     3                                     
+</message>
+<message date="31/12/2018" time="1460.00000000000000">
+ RESTART FILE WRITTEN   REPORT     4                                     
+</message>
+<message date="31/12/2019" time="1825.00000000000000">
+ RESTART FILE WRITTEN   REPORT     5                                     
+</message>
+<message date="30/12/2020" time="2190.00000000000000">
+ RESTART FILE WRITTEN   REPORT     6                                     
+</message>
+<message date="30/12/2021" time="2555.00000000000000">
+ RESTART FILE WRITTEN   REPORT     7                                     
+</message>
+<message date="30/12/2022" time="2920.00000000000000">
+ RESTART FILE WRITTEN   REPORT     8                                     
+</message>
+<message date="30/12/2023" time="3285.00000000000000">
+ RESTART FILE WRITTEN   REPORT     9                                     
+</message>
+<message date="29/12/2024" time="3650.00000000000000">
+ RESTART FILE WRITTEN   REPORT    10                                     
+</message>
+<message date="29/12/2025" time="4015.00000000000000">
+ RESTART FILE WRITTEN   REPORT    11                                     
+</message>
+<message date="29/12/2026" time="4380.00000000000000">
+ RESTART FILE WRITTEN   REPORT    12                                     
+</message>
+</eclipse>
