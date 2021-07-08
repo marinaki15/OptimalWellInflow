@@ -10,5 +10,3 @@ The script optimalwellinflow.py executes this workflow, the variables required b
 The well control optimization is executed in FieldOpt (https://github.com/PetroleumCyberneticsGroup/FieldOpt).
 Data files for the simple synthetic models described in Nakibuule (2021) are included.
 
-### Specialization Project
-The specialization project was done as a precusor to the master thesis. In the project the optimall pressure distribution was determmines by optimizing the BHP of the well segments with only a single control  time step. The folder includes the working setup for running FieldOpt optimizations.
