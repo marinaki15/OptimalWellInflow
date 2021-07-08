@@ -1,0 +1,335 @@
+-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+RUNSPEC
+
+TITLE
+    SHOEBOX MODEL
+
+DIMENS
+60 60 20 /
+-- COMMENT: #active grid blocks = 72000
+
+OIL
+WATER
+-- COMMENT: 2-phases, oil-water system
+
+EQLDIMS
+/
+-- COMMENT: 
+-- The number of equilibration regions is inferred from the EQLDIMS
+-- keyword.
+-- When no data is included in the keyword, the default values are
+-- used.
+
+TABDIMS
+--  1)  2)  3)  4)  5)  6)
+1*  1*  50 /
+-- COMMENT:
+-- Describes size of saturation and PVT tables, also the number of
+-- fluids-in-place (FIP) regions.
+-- 1) # of sat tables entered (def. 1)
+-- 2) # of PVT tables entered (def. 1)
+-- 3) max # of sat nodes in any sat table (def. 20)
+-- 4) max # of pressure nodes in table (def. 20)
+-- 5) max # of FIP regions (def. 1)
+-- 6) max # of Rs nodes in live oil PVT table (def. 20)
+
+WELLDIMS
+-- 1)  2)  3)  4)
+20  200  2  20 /
+-- 1) max # of wells in model (def. 0)
+-- 2) max # of connections per well (def. 0)
+-- 3) max # of groups in model (def. 0)
+-- 4) max # of wells in any one group (def. 0)
+
+WSEGDIMS
+-- 1)  2)  3)  4)
+5  200 50  5 /
+-- 1) max # of multisegment wells
+-- 2) max # segments per well
+-- 3) max # branches (including the main stem) per multisegment well
+-- 4) max # of segment chord links per well
+
+AQUDIMS
+-- 1)  2)
+1  1 /
+-- 1) max #lines of numerical aquifer data entered in keyword AQUNUM
+-- 2) max #lines of connection data for numerical aquifers entered in
+--    keyword AQUCON
+
+METRIC
+-- COMMENT: unit specification
+
+START
+1 'JAN' 2015 /
+
+NSTACK
+25 /
+
+UNIFIN
+UNIFOUT
+
+-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+GRID
+
+INIT
+-- COMMENT:
+-- The INIT keyword is used to request an .INIT file. The .INIT file
+-- is written before the simulation actually starts, and contains 
+-- a summary of data entered in the GRID, PROPS and REGIONS sections.
+-- There are no other keywords which can be used to configure exactly
+-- what is written to the .INIT file.
+
+DX
+72000*25 /
+-- COMMENT: size of cells in x-direction
+
+DY
+72000*25 /
+-- COMMENT: size of cells in y-direction
+
+DZ
+72000*4 /
+
+
+-- COMMENT: size of cells in z-direction
+
+TOPS
+3600*2000 /
+-- COMMENT: depths of the top face of each grid block
+
+INCLUDE
+'./include/poro_SHOEBOX.INC' /
+--PORO
+--72000*0.3 /
+
+INCLUDE
+'./include/permx_SHOEBOX.INC' /
+--PERMX
+--72000*100 /
+
+INCLUDE
+'./include/permy_SHOEBOX.INC' /
+--PERMY
+--72000*100 /
+
+INCLUDE
+'./include/permz_SHOEBOX.INC'/
+
+-- PERMZ
+-- 72000*10 /
+-- COMMENT: 0.1 of horizontal permeability
+
+NTG
+72000*1 /
+
+MULTIPLY
+NTG 9E+09 1* 60 1* 60 20 20 / NTG * 9E+09
+/
+
+AQUNUM
+-- 1)  2)  3)  4)  5)  6)  7)  8)  9)  10)  11)  12)
+1  30  30  20  9E+09  1  1* 100 4* /
+/
+-- 1) aquifer identification number
+-- 2) I-coordinate of grid block to represent aquifer
+-- 3) J-coordinate of grid block to represent aquifer
+-- 4) K-coordinate of grid block to represent aquifer
+-- 5) cross-sectional area
+-- 6) length
+-- 7) porosity
+-- 8) permeability
+-- 9) aquifer depth
+-- 10) initial pressure
+-- 11) PVT table number for aquifer
+-- 12) saturation table number for aquifer
+-- COMMENT: aquifer bulk volume = 1000 x reservoir bulk volume
+--                              = 1000 x (60*25)^2 * 4
+--                              = 9E+09
+
+AQUCON
+-- 1)  2)  3)  4)  5)  6)  7)  8)  9)  10)  11)
+1  1  60  1  60  20  20  K+  5* /
+/
+-- 1) aquifer identification number
+-- 2) lower I-coordinate of cells to be connected
+-- 3) upper I-coordinate of cells to be connected
+-- 4) lower J-coordinate of cells to be connected
+-- 5) upper J-coordinate of cells to be connected
+-- 6) lower K-coordinate of cells to be connected
+-- 7) upper K-coordinate of cells to be connected
+-- 8) face of the cell to be connected to the aquifer
+-- 9) the transmissibility multiplier
+-- 10) transmissibility option
+-- 11) allow aquifer connections to cell faces adjoining active cells?
+
+-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+PROPS
+
+PVTW
+-- 1)  2)  3)  4)  5)
+215  1.0132  3.9795E-005  0.39851  0 /
+-- 1) pressure reference
+-- 2) water FVF
+-- 3) water compressibility
+-- 4) water viscosity
+-- 5) water 'viscosibility'
+-- COMMENT: taken from the Olympus model
+
+PVDO
+-- 1)  2)  3)
+ 80          1.1069       2.5171
+ 94.211      1.1038       2.5676
+108.42       1.1016       2.6272
+122.63       1.0999       2.6951
+136.84       1.0985       2.7708
+151.05       1.0974       2.8538
+165.26       1.0965       2.9436
+179.47       1.0957       3.0401
+193.68       1.0951       3.1428
+207.89       1.0945       3.2517
+222.11       1.094        3.3666
+236.32       1.0936       3.4871
+250.53       1.0932       3.6133
+264.74       1.0928       3.7448
+278.95       1.0925       3.8817
+293.16       1.0923       4.0236
+307.37       1.092        4.1705
+321.58       1.0918       4.3221
+335.79       1.0916       4.4782 /
+-- 1) oil phase pressure
+-- 2) oil FVF
+-- 3) oil viscosity
+-- COMMENT: taken from the Olympus model
+
+DENSITY
+-- 1)  2)  3)
+897.53  1020.3  0.81172 /
+-- Density at surface condition of oil, water and gas, respectively
+-- COMMENT: taken from the Olympus model
+
+ROCK
+-- 1)  2)
+230  1.4234E-005 /
+-- 1) reference pressure
+-- 2) rock compressibility
+-- COMMENT: taken from the Olympus model
+
+SWOF
+-- 1)  2)  3)  4)
+0.08     0           1            0
+0.116    0.00094522  0.8635       0
+0.152    0.0018904   0.727        0
+0.188    0.0028356   0.59051      0
+0.22     0.0036758   0.46917      0
+0.224    0.0041168   0.45902      0
+0.26     0.0080858   0.36761      0
+0.296    0.01404     0.29007      0
+0.32     0.018519    0.24192      0
+0.332    0.022049    0.22386      0
+0.368    0.032639    0.16967      0
+0.38     0.036169    0.1516       0
+0.404    0.046377    0.12553      0
+0.43     0.057435    0.097284     0
+0.44     0.063095    0.089533     0
+0.476    0.08347     0.061628     0
+0.48     0.085734    0.058528     0
+0.5      0.099248    0.046694     0
+0.512    0.10881     0.041408     0
+0.548    0.13749     0.025549     0
+0.55     0.13908     0.024668     0
+0.584    0.17259     0.015575     0
+0.6      0.18836     0.011296     0
+0.62     0.21225     0.0084287    0
+0.65     0.24808     0.0041272    0
+0.656    0.25662     0.0037518    0
+0.692    0.30787     0.0014991    0
+0.7      0.31926     0.00099847   0
+0.728    0.3661      0.00048875   0
+0.75     0.4029      8.8253E-005  0
+0.764    0.43009     6.3542E-005  0
+0.8      0.5         0            0
+1        0.5         0            0 /
+-- 1) water saturation
+-- 2) water relative permeability
+-- 3) oil relative permeability when only oil and water are present
+-- 4) water-oil capillary pressure
+-- COMMENT: taken from the Olympus model (SATNUM or table = 3)
+
+-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+REGIONS
+
+SATNUM
+72000*1 /
+
+-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+SOLUTION
+
+EQUIL
+-- 1)  2)  3)  4)  5)  6)  7)  8)  9)
+2000  200  2060  0  0  0  0  0  0 /
+-- 1) datum depth
+-- 2) pressure at datum depth
+-- 3) depth of water-oil contact
+-- 4) oil-water capillary pressure at water-oil contact
+-- 5) depth of gas-oil contact
+-- 6) gas-oil capillary pressure at gas-oil contact
+-- 7) integer selecting the type of initialization for live black oil
+--    (RSVD-table)
+-- 8) integer selecting the type of initialization for black oil runs
+--    with wet gas (RVVD-table)
+-- 9) integer (N) defining the accuracy of the initial fluids in
+--    place calculation
+
+RPTRST    
+'BASIC=2'
+/
+
+-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+SUMMARY
+
+SEPARATE
+RUNSUM
+RPTSMRY
+1 /
+
+INCLUDE
+'./include/SUMMARY.INC' /
+
+-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+SCHEDULE
+
+TUNING  
+-- 3 sections
+0.1  10  7*  0.1 /
+-- (1,1) TSINIT Max length of next timestep
+-- (1,2) TSMAXZ Max length timesteps after the next
+-- (1,10)TMAXWC Max length of next timestep following a well
+-- modification
+/
+-- (2,1) TRGTTE Target time truncation error
+-- (2,2) TRGCNV Target non-linear convergence error
+-- (2,3) TRGMBE Target material balance error
+-- (2,4) TRGLCV Target linear convergence error
+-- (2,5) XXXTTE Maximum time truncation error
+-- (2,6) XXXCNV Maximum non-linear convergence error
+/
+-- (3,1) NEWTMX Max # of Newton iters in a time step
+-- (3,2) NEWTMN Min # of Newton iters in a time step
+-- (3,3) LITMAX Max # of linear iters in a Newton iter (def. 25)
+
+INCLUDE
+'./include/1WSHOEBOXMODEL_SCH.INC'  /
+
+-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+END
+
+-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
